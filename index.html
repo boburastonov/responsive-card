@@ -4,16 +4,47 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project</title>
-
+  <title>Responsive CSS Card</title>
+  
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-
-
+  
+  <div class="card">
+    <div class="container card__container">
+      <img class="card__img" src="profile.jpg">
+      <div class="card__info">
+        <h2 class="card__info-author">Alina Smith</h2>
+        <h3 class="card__info-author-job">Senior UX/UI Designer</h3>
+        <ul class="card__info-list">
+          <li class="card__info-item">
+            <var>342</var>
+            <label>Posts</label>
+          </li>
+          <li class="card__info-item">
+            <var>120k</var>
+            <label>Followers</label>
+          </li>
+          <li class="card__info-item">
+            <var>285</var>
+            <label>Following</label>
+          </li>
+        </ul>
+        <nav class="buttons">
+          <button class="btn btn-primary">Follow</button>
+          <button class="btn btn-message">Message</button>
+        </nav>
+      </div>
+    </div>
+  </div>
+  
   <script src="js/main.js"></script>
 </body>
 </html>

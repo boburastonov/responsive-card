@@ -15,12 +15,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 100vh;
   padding: 0;
   margin: 0;
   font-family: "Poppins", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
   background: linear-gradient(-140deg, #ff65c5, #fa909d, #fcce6c);
 }
 
@@ -73,7 +71,7 @@ select:-webkit-autofill:focus {
 .container {
   width: 75vw;
   max-width: 650px;
-  padding: 50px 30px 20px;
+  padding: 50px 30px 50px 20px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -84,6 +82,120 @@ select:-webkit-autofill:focus {
   flex-grow: 1;
 }
 
+/* CARD */
+.card__container {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 24px;
+}
+
+.card__img {
+  width: 32vw;
+  max-width: 280px;
+  height: 270px;
+  object-fit: cover;
+  margin-left: -60px;
+  margin-right: 40px;
+  border-radius: inherit;
+}
+
+.card__info-author {
+  font-size: 28px;
+  margin: 0;
+}
+
+.card__info-author, .card__info-author-job{
+  font-weight: 400;
+}
+.card__info-author-job {
+  font-size: 16px;
+  margin: 0 0 20px;
+}
+
+.card__info-list{
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+var{
+  display: block;
+  font-style: normal;
+  font-size: 26px;
+}
+
+.card__info-author-job, label{
+  opacity: 0.5;
+}
+
+.buttons {
+  display: inline-flex;
+  gap: 10px;
+}
+
+.btn{
+  border: 1px solid #a7a7a7;
+  background-color: transparent;
+  color: #a7a7a7;
+  font-family: inherit;
+  padding: 16px 20px;
+  font-size: 18px;
+  border-radius: 6px;
+  min-width: 120px;
+  cursor: pointer;
+  outline: none;
+}
+
+
+.btn:active{
+  opacity: 0.6;
+}
+
+.btn-primary {
+  color: #f9f9f9;
+  background-color: #fe5c89;
+  border: 0;
+}
+
+.btn-message:hover{
+  color: #f9f9f9;
+  background-color: #fe5c89;
+  border: 0;
+}
+
+@media (width <= 720px){
+  .card__container{
+    margin: 0 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+
+  }
+
+  .card__info-author{
+    font-size: 30px;
+  }
+
+  .card__img{
+    margin: -100px 0 30px 0;
+    width: 100%;
+    max-width: 1000px;
+  }
+
+  var{
+    min-width: 90px;
+  }
+
+  .btn{
+    min-width: 160px;
+  }
+}
+
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
@@ -91,5 +203,5 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
-
+  
 }
